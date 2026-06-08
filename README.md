@@ -1,77 +1,90 @@
-🚀 Hybrid Parallel Computing Framework (MPI + CUDA)
-----
+# 🚀 Hybrid Parallel Computing Framework (MPI + CUDA)
 
-📌 Overview
-This project implements a Hybrid Parallel Computing Framework combining MPI (distributed computing) and CUDA (GPU acceleration) to efficiently process large-scale image and matrix operations using a two-level parallel strategy.
+## 📌 Overview
 
-----
+This project implements a **Hybrid Parallel Computing Framework** that combines **MPI (Message Passing Interface)** for distributed computing and **CUDA** for GPU acceleration. The framework efficiently performs image processing and matrix operations using a two-level parallelization strategy to improve performance and scalability.
 
-🎯 Objectives
+---
 
-Combine MPI + CUDA for hybrid parallel execution
-Improve performance of large-scale computations
-Implement two-level data partitioning:
-MPI → inter-node distribution
-CUDA → intra-node GPU processing
-Optimize image processing and matrix operations
+## 🎯 Objectives
 
-----
+* Combine MPI and CUDA for hybrid parallel execution.
+* Improve the performance of large-scale computations.
+* Implement two-level data partitioning:
 
-🧠 Architecture
+  * **MPI:** Inter-node data distribution.
+  * **CUDA:** Intra-node GPU computation.
+* Optimize image processing and matrix operations.
+
+---
+
+## 🧠 Architecture
+
+```text
 Input Data
-   ↓
-  MPI
-   ↓
-Nodes (Parallel Processes)
-   ↓
+    ↓
+MPI Distribution
+    ↓
+Parallel Processes
+    ↓
 CUDA GPU Computation
-   ↓
+    ↓
 MPI Result Gathering
-   ↓
+    ↓
 Final Output
+```
 
-----
+---
 
-🛠️ Tools & Technologies:
+## 🛠️ Tools & Technologies
 
-Google Colab (GPU)
-CUDA C / CUDA Toolkit
-OpenMPI
-Python / C++
-NumPy
+* Google Colab (GPU-enabled environment)
+* CUDA C / CUDA Toolkit
+* OpenMPI
+* Python / C++
+* NumPy
 
-----
+---
 
-📊 Implemented Features
+## 📊 Implemented Features
 
-🖼 Image Processing:
-Brightness Adjustment
-Contrast Enhancement
+### 🖼️ Image Processing
 
-2D Convolution:
-🔢 Matrix Operations
-Matrix Multiplication (Hybrid MPI + CUDA)
-Matrix Transpose (Parallel Execution)
+* Brightness Adjustment
+* Contrast Enhancement
+* 2D Convolution (Edge Detection)
 
-----
+### 🔢 Matrix Operations
 
-⚙️ Methodology
+* Matrix Multiplication (Hybrid MPI + CUDA)
+* Matrix Transpose (Parallel Execution)
 
-MPI divides data across processes
-CUDA performs GPU-based computation
-Results are merged using MPI
-Multiple partitioning strategies used for load balancing
+---
 
-----
+## ⚙️ Methodology
 
-📈 Performance
+* MPI divides data among multiple processes.
+* CUDA performs GPU-accelerated computation.
+* Results are aggregated using MPI communication.
+* Different partitioning strategies are used for workload balancing.
 
-Speedup is calculated as:
+---
+
+## 📈 Performance Evaluation
+
+Performance is measured by comparing the hybrid model with a traditional single-CPU implementation.
+
+**Speedup Formula:**
+
+```text
 Speedup = Time(Single CPU) / Time(Hybrid)
+```
 
-The hybrid model shows significant improvement in execution time and scalability compared to traditional CPU execution.
+The hybrid framework demonstrates significant improvements in execution time and scalability compared to single-CPU execution.
 
-----
+---
 
-✅ Conclusion
-The framework demonstrates that combining MPI + CUDA significantly enhances performance for compute-intensive image and matrix operations by leveraging both distributed and GPU parallelism.
+## ✅ Conclusion
+
+The Hybrid MPI + CUDA framework effectively combines distributed computing and GPU acceleration to enhance the performance of computationally intensive image processing and matrix operations.
+
