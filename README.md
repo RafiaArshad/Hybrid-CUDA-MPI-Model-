@@ -1,4 +1,5 @@
 🚀 Hybrid Parallel Computing Framework (MPI + CUDA)
+----
 
 📌 Overview
 This project implements a Hybrid Parallel Computing Framework combining MPI (distributed computing) and CUDA (GPU acceleration) to efficiently process large-scale image and matrix operations using a two-level parallel strategy.
@@ -28,6 +29,7 @@ CUDA GPU Computation
 MPI Result Gathering
    ↓
 Final Output
+
 ----
 
 🛠️ Tools & Technologies:
